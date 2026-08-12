@@ -51,8 +51,11 @@ export const profile = {
 /* ---------------------------------------------------------------- SOCIALS */
 export const socials = [
   { name: 'GitHub', icon: 'github', url: 'https://github.com/mahazahmad-ai' },
-  // TODO: add LinkedIn once you have a profile.
-  // { name: 'LinkedIn', icon: 'linkedin', url: 'https://linkedin.com/in/YOUR-NAME' },
+  {
+    name: 'LinkedIn',
+    icon: 'linkedin',
+    url: 'https://www.linkedin.com/in/mahaz-ahmad-39b3b63a6/',
+  },
   { name: 'WhatsApp', icon: 'whatsapp', url: 'https://wa.me/923498260256' },
   { name: 'Instagram', icon: 'instagram', url: 'https://instagram.com/_.mahazz' },
   { name: 'Email', icon: 'envelope-fill', url: 'mailto:akmseven143@gmail.com' },
