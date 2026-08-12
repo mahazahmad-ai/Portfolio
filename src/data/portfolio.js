@@ -35,10 +35,12 @@ export const profile = {
   // Your photo, in public/profile.jpg. Set to null to fall back to the
   // generated "MA" initials avatar instead.
   photo: '/profile.jpg',
-  // Your full Europass CV lives at public/cv.pdf. To update it, overwrite that file.
-  cv: '/cv.pdf',
-  // The filename the visitor's browser saves it as.
-  cvFileName: 'Mahaz-Ahmad-CV.pdf',
+  // NOTE: the Europass CV PDF is deliberately NOT published on this site.
+  // It contains passport number, CNIC, date of birth and home address —
+  // none of which belong on a public page. Send it privately to employers
+  // who ask for it. The resume page below carries everything a recruiter
+  // actually needs, built from safe data only.
+  //
   // The one-page resume page (src/components/ResumePage.jsx). Print it to PDF.
   resume: '/resume.html',
   // Printed on the resume so anyone with a paper copy can find the site.

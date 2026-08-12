@@ -25,13 +25,9 @@ export default function About() {
               ))}
 
               <div className="d-flex flex-wrap gap-3 mt-4">
-                <a className="btn btn-accent" href={asset(profile.cv)} download={profile.cvFileName}>
-                  <i className="bi bi-file-earmark-arrow-down me-2" />
-                  Download CV
-                </a>
-                <a className="btn btn-ghost" href={asset(profile.resume)}>
+                <a className="btn btn-accent" href={asset(profile.resume)}>
                   <i className="bi bi-file-text me-2" />
-                  View resume
+                  View my resume
                 </a>
                 <a className="btn btn-ghost" href="#contact">
                   <i className="bi bi-send me-2" />

@@ -104,25 +104,14 @@ export default function Navbar() {
                   </a>
                 </li>
               ))}
-              <li className="nav-item ms-lg-2 mt-3 mt-lg-0">
+              <li className="nav-item ms-lg-3 mt-3 mt-lg-0">
                 <a
-                  className="nav-link-custom"
+                  className="btn btn-accent btn-sm px-3 py-2"
                   href={asset(profile.resume)}
                   onClick={() => setOpen(false)}
                 >
                   <i className="bi bi-file-text me-2" />
                   Resume
-                </a>
-              </li>
-              <li className="nav-item ms-lg-1 mt-2 mt-lg-0">
-                <a
-                  className="btn btn-accent btn-sm px-3 py-2"
-                  href={asset(profile.cv)}
-                  download={profile.cvFileName}
-                  onClick={() => setOpen(false)}
-                >
-                  <i className="bi bi-download me-2" />
-                  Download CV
                 </a>
               </li>
             </ul>
