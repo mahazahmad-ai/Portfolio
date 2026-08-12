@@ -49,11 +49,7 @@ export const profile = {
 
 /* ---------------------------------------------------------------- SOCIALS */
 export const socials = [
-  // ⚠ TODO — create a GitHub account, push the Java projects listed below, and
-  // uncomment this. It is the single most valuable link on a developer
-  // portfolio, and right now the site has nowhere to show your code.
-  // { name: 'GitHub', icon: 'github', url: 'https://github.com/YOUR-USERNAME' },
-  //
+  { name: 'GitHub', icon: 'github', url: 'https://github.com/mahazahmad-ai' },
   // TODO: add LinkedIn once you have a profile.
   // { name: 'LinkedIn', icon: 'linkedin', url: 'https://linkedin.com/in/YOUR-NAME' },
   { name: 'WhatsApp', icon: 'whatsapp', url: 'https://wa.me/923498260256' },
@@ -306,7 +302,7 @@ export const projects = [
     tags: ['React', 'Vite', 'Bootstrap', 'CSS'],
     // TODO: paste your live URL here once the site is deployed.
     demo: null,
-    code: null,
+    code: 'https://github.com/mahazahmad-ai/Portfolio',
     featured: false,
     year: '2026',
   },
