@@ -36,7 +36,12 @@ jobs:
           VITE_BASE: /Portfolio/
         run: npm run build
 
+      # enablement: true makes this step create the Pages site if it does not
+      # already exist, instead of failing with "Get Pages site failed".
+      # Requires the pages: write permission granted above.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
