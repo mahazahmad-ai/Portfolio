@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: once deployed, add your sitemap, e.g.
+# Sitemap: https://your-site.netlify.app/sitemap.xml

@@ -1,0 +1,315 @@
+/* ==========================================================================
+   Printable one-page resume — /resume.html
+   Deliberately plain: black on white, one column, no dependency on Bootstrap.
+   Recruiters print these and applicant-tracking systems parse them, so the
+   markup stays simple and the colours stay ink-friendly.
+   ========================================================================== */
+
+:root {
+  --r-ink: #16181d;
+  --r-dim: #565c69;
+  --r-rule: #c9ced8;
+  --r-accent: #1f3a8a;
+  --r-page: #ffffff;
+  --r-desk: #eef1f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--r-desk);
+  color: var(--r-ink);
+  font-family: 'Segoe UI', Calibri, Carlito, system-ui, -apple-system, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ------------------------------------------------------------- toolbar -- */
+.r-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+}
+
+.r-back {
+  color: var(--r-accent);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.r-back:hover {
+  text-decoration: underline;
+}
+
+.r-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.r-hint {
+  color: var(--r-dim);
+  font-size: 0.85rem;
+}
+
+.r-print-btn {
+  border: none;
+  border-radius: 8px;
+  background: var(--r-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.15rem;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.r-print-btn:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------------------------- page -- */
+.r-sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 3rem;
+  padding: 14mm 16mm;
+  background: var(--r-page);
+  box-shadow: 0 12px 40px -18px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 230mm) {
+  .r-sheet {
+    width: 100%;
+    min-height: 0;
+    padding: 8mm 6mm;
+    box-shadow: none;
+  }
+}
+
+/* -------------------------------------------------------------- header -- */
+.r-header {
+  border-bottom: 2px solid var(--r-ink);
+  padding-bottom: 0.7rem;
+  margin-bottom: 1.1rem;
+}
+
+.r-name {
+  margin: 0;
+  font-size: 24pt;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.r-role {
+  margin: 0.15rem 0 0.5rem;
+  font-size: 11.5pt;
+  font-weight: 600;
+  color: var(--r-accent);
+}
+
+.r-contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0;
+  margin: 0;
+  padding: 0;
+  font-size: 9.5pt;
+  color: var(--r-dim);
+}
+
+.r-contact li + li::before {
+  content: '·';
+  margin: 0 0.5rem;
+}
+
+/* ------------------------------------------------------------ sections -- */
+.r-section {
+  margin-bottom: 1rem;
+  /* Never split a section across a page break if it can be helped. */
+  break-inside: avoid;
+}
+
+.r-section-title {
+  margin: 0 0 0.5rem;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--r-accent);
+  border-bottom: 1px solid var(--r-rule);
+  padding-bottom: 0.2rem;
+}
+
+.r-summary {
+  margin: 0;
+  text-align: justify;
+}
+
+/* -------------------------------------------------------------- skills -- */
+.r-skills {
+  margin: 0;
+}
+
+.r-skill-row {
+  display: grid;
+  grid-template-columns: 40mm 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.28rem;
+}
+
+.r-skill-row dt {
+  font-weight: 700;
+}
+
+.r-skill-row dd {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .r-skill-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ------------------------------------------------- experience/education -- */
+.r-entry {
+  margin-bottom: 0.7rem;
+  break-inside: avoid;
+}
+
+.r-entry--tight {
+  margin-bottom: 0.45rem;
+}
+
+.r-entry:last-child {
+  margin-bottom: 0;
+}
+
+.r-entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.r-entry-title {
+  margin: 0;
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.r-entry-date {
+  font-size: 9.5pt;
+  color: var(--r-dim);
+  white-space: nowrap;
+}
+
+.r-entry-sub {
+  margin: 0.05rem 0 0.25rem;
+  font-size: 10pt;
+  font-style: italic;
+  color: var(--r-dim);
+}
+
+.r-grade {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--r-ink);
+}
+
+.r-bullets {
+  margin: 0;
+  padding-left: 1.05rem;
+}
+
+.r-bullets li {
+  margin-bottom: 0.1rem;
+}
+
+/* ------------------------------------------------------ two-up sections -- */
+.r-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.6rem;
+}
+
+@media (max-width: 600px) {
+  .r-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+.r-plain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 10pt;
+}
+
+.r-plain li {
+  margin-bottom: 0.25rem;
+}
+
+.r-dim {
+  color: var(--r-dim);
+}
+
+.r-projects li {
+  margin-bottom: 0.4rem;
+}
+
+.r-tags {
+  display: block;
+  font-size: 9pt;
+  font-weight: 600;
+  color: var(--r-accent);
+}
+
+/* --------------------------------------------------------------- print -- */
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  body {
+    background: #fff;
+    font-size: 10pt;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .r-sheet {
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  /* Keep link colours legible in grayscale print. */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
