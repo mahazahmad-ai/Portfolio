@@ -69,10 +69,10 @@ export const about = {
   ],
   // Small stat cards next to the bio.
   stats: [
-    { value: '6', label: 'Projects built' },
     { value: 'A', label: 'DIT final grade' },
     { value: '4', label: 'Qualifications earned' },
     { value: '4', label: 'Languages spoken' },
+    { value: '1yr', label: 'Volunteering' },
   ],
   // Quick facts list.
   facts: [
@@ -274,28 +274,6 @@ export const projects = [
     year: '2025',
   },
   {
-    title: 'Huffman Coding Compression Tool',
-    description:
-      'An implementation of Huffman encoding from scratch: builds a frequency table from the input text, assembles the optimal prefix tree using a priority queue, then walks it to generate per-character bit codes. Encodes messages to a binary string and decodes them back by traversing the tree bit by bit. Handles the single-character edge case that breaks naive implementations.',
-    image: null,
-    tags: ['Java', 'Algorithms', 'Binary Tree'],
-    demo: null,
-    code: null,
-    featured: true,
-    year: '2025',
-  },
-  {
-    title: 'Binary Search Tree Explorer',
-    description:
-      'A menu-driven BST supporting recursive insert, search and delete — including the hard delete case, where a node with two children is replaced by its in-order successor found via minimum-value descent. Written to make the tree operations legible rather than clever.',
-    image: null,
-    tags: ['Java', 'Data Structures', 'Binary Tree'],
-    demo: null,
-    code: null,
-    featured: false,
-    year: '2025',
-  },
-  {
     title: 'Personal Portfolio Website',
     description:
       'This site. Built with React and Vite, styled with Bootstrap 5 and custom CSS on a token-driven dark theme. Single-source content architecture, scroll animations via IntersectionObserver with no animation library, scroll-spy navigation, and a separate print-first resume page generated from the same data.',
@@ -304,36 +282,16 @@ export const projects = [
     // TODO: paste your live URL here once the site is deployed.
     demo: null,
     code: 'https://github.com/mahazahmad-ai/Portfolio',
-    featured: false,
+    featured: true,
     year: '2026',
-  },
-  {
-    title: 'Queue & Deque Operations Suite',
-    description:
-      'A set of queue structures implemented by hand: an array-backed queue, a circular queue that reclaims space by wrapping its indices, and an output-restricted deque built on a linked node chain. Each has its own menu driver for testing enqueue, dequeue and overflow behaviour.',
-    image: null,
-    tags: ['Java', 'Data Structures'],
-    demo: null,
-    code: null,
-    featured: false,
-    year: '2025',
-  },
-  {
-    title: 'Postfix Expression Evaluator',
-    description:
-      'A stack-based evaluator that reads a postfix expression left to right, pushing operands and applying operators to the two most recent values. A compact demonstration of why stacks and postfix notation belong together — no parentheses or precedence rules needed.',
-    image: null,
-    tags: ['Java', 'Algorithms', 'Stack'],
-    demo: null,
-    code: null,
-    featured: false,
-    year: '2025',
   },
 ]
 
 /* Filter buttons for the projects grid. "All" is added automatically.
-   Each entry must match a tag used above, or the button is hidden. */
-export const projectFilters = ['Java', 'Data Structures', 'Algorithms', 'React']
+   Each entry must match a tag used above, or the button is hidden.
+   Left empty because two projects do not need filtering — the bar hides
+   itself. Add entries here if you add more projects later. */
+export const projectFilters = []
 
 /* ----------------------------------------------------------- CERTIFICATES */
 export const certificates = [
