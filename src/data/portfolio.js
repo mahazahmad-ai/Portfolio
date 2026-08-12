@@ -41,9 +41,8 @@ export const profile = {
   cvFileName: 'Mahaz-Ahmad-CV.pdf',
   // The one-page resume page (src/components/ResumePage.jsx). Print it to PDF.
   resume: '/resume.html',
-  // TODO: once the site is deployed, put the live URL here — it is printed on
-  // the resume so anyone holding a paper copy can find the full portfolio.
-  website: null, // e.g. 'mahazahmad.netlify.app'
+  // Printed on the resume so anyone with a paper copy can find the site.
+  website: 'mahazahmad-ai.github.io/Portfolio',
   available: true, // shows the "Available for work" pill in the hero
 }
 

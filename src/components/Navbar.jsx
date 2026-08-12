@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { navLinks, profile } from '../data/portfolio'
+import { asset } from '../utils/asset'
 
 /** Two initials from the full name, e.g. "Your Name" -> "YN". */
 function initials(name) {
@@ -106,7 +107,7 @@ export default function Navbar() {
               <li className="nav-item ms-lg-2 mt-3 mt-lg-0">
                 <a
                   className="nav-link-custom"
-                  href={profile.resume}
+                  href={asset(profile.resume)}
                   onClick={() => setOpen(false)}
                 >
                   <i className="bi bi-file-text me-2" />
@@ -116,7 +117,7 @@ export default function Navbar() {
               <li className="nav-item ms-lg-1 mt-2 mt-lg-0">
                 <a
                   className="btn btn-accent btn-sm px-3 py-2"
-                  href={profile.cv}
+                  href={asset(profile.cv)}
                   download={profile.cvFileName}
                   onClick={() => setOpen(false)}
                 >

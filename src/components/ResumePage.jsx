@@ -10,6 +10,7 @@ import {
   skillGroups,
   socials,
 } from '../data/portfolio'
+import { asset } from '../utils/asset'
 
 /* The portfolio descriptions run long for print. Take the first sentence —
    enough to say what the project is without eating half the page. */
@@ -41,7 +42,7 @@ export default function ResumePage() {
     <>
       {/* Screen-only toolbar — hidden by the print stylesheet. */}
       <div className="r-toolbar no-print">
-        <a className="r-back" href="/">
+        <a className="r-back" href={asset('/')}>
           ← Back to portfolio
         </a>
         <div className="r-toolbar-actions">

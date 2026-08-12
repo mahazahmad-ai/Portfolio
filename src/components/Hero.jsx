@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Reveal from './Reveal'
 import { profile, socials } from '../data/portfolio'
+import { asset } from '../utils/asset'
 
 /** Types each role out, holds, deletes, then moves to the next one. */
 function useTypedRole(roles) {
@@ -46,7 +47,7 @@ function Portrait() {
     <div className="hero-portrait">
       <div className="hero-portrait-inner">
         {profile.photo ? (
-          <img src={profile.photo} alt={profile.name} />
+          <img src={asset(profile.photo)} alt={profile.name} width="360" height="360" />
         ) : (
           <span className="hero-initials">{initials}</span>
         )}

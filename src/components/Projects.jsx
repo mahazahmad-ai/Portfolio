@@ -2,13 +2,14 @@ import { useMemo, useState } from 'react'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 import { projectFilters, projects } from '../data/portfolio'
+import { asset } from '../utils/asset'
 
 function ProjectCard({ project }) {
   return (
     <div className={`card-glass project-card ${project.featured ? 'project-card--featured' : ''}`}>
       <div className="project-cover">
         {project.image ? (
-          <img src={project.image} alt={project.title} loading="lazy" />
+          <img src={asset(project.image)} alt={project.title} loading="lazy" />
         ) : (
           <>
             <span className="project-cover-grid" aria-hidden="true" />
