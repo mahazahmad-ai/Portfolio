@@ -254,10 +254,10 @@ export const experience = [
 /*  These are written from the real Java projects in your NetBeansProjects
  *  folder, plus this website. Nothing here is invented.
  *
- *  ⚠ TODO — every `code` link is null because none of these are on GitHub yet.
- *  Cards without links still look fine, but a recruiter cannot read the code.
- *  Push each project to GitHub and paste the URL into `code` — that single
- *  step does more for this portfolio than any other change you can make.
+ *  The Java projects still have no `code` link because they are not on GitHub
+ *  yet. Cards without links look fine, but a recruiter cannot read the code —
+ *  pushing each one and pasting the URL into `code` does more for this
+ *  portfolio than any other change you can make.
  *
  *  `featured: true` gives the project a wider card at the top of the grid.
  *  Set `image` to a path in /public (e.g. '/projects/timber.png'), or leave
@@ -265,6 +265,17 @@ export const experience = [
  *  console output would work well here.
  */
 export const projects = [
+  {
+    title: 'Booking System for Salons & Clinics',
+    description:
+      'A guest booking platform where customers pick a treatment, see only genuinely free times, and confirm without creating an account — plus an admin area for running the schedule. Availability is derived on demand from staff hours minus time off minus existing bookings, never stored, so cancelling frees a slot with no cleanup job. Two customers clicking the same slot cannot both get it: a Postgres exclusion constraint refuses the second write, because checking in application code cannot close the gap between the check and the insert. 117 unit tests cover the availability engine including daylight-saving transitions, plus 92 integration checks run against a live database.',
+    image: null,
+    tags: ['Next.js 16', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind', 'Auth.js'],
+    demo: 'https://booking-system-opal-theta.vercel.app',
+    code: 'https://github.com/mahazahmad-ai/booking-system',
+    featured: true,
+    year: '2026',
+  },
   {
     title: 'Timber Inventory Management System',
     description:
