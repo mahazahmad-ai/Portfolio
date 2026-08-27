@@ -266,6 +266,20 @@ export const experience = [
  */
 export const projects = [
   {
+    title: 'Pearl Dental Studio',
+    description:
+      'A scroll-driven site for a dental practice, with a working booking system and an admin panel the practice runs itself. The hero is a real-time 3D tooth rendered with react-three-fiber, and the treatments section pins and scrolls horizontally on desktop while falling back to a stacked list on phones. Availability is derived on every request from opening hours, closures, each clinician’s working days and the diary, never stored, so there is no table of free slots to drift out of sync. Two patients submitting the same slot cannot both succeed: the conflict test runs inside the INSERT itself, so Postgres settles it in one statement nothing else can interleave with. Staff sign in behind a signed httpOnly cookie verified in Edge middleware, then edit treatments, team, prices, opening hours and contact details without a developer — a saved price is live on the public page on the next request.',
+    image: null,
+    tags: ['Next.js 14', 'TypeScript', 'PostgreSQL', 'Drizzle', 'Three.js', 'GSAP'],
+    demo: 'https://pearl-dental-studio.vercel.app',
+    // Private repository, so there is no code link. Making it public would let
+    // a recruiter read it, which is the same point the note above makes about
+    // the Java projects.
+    code: null,
+    featured: true,
+    year: '2026',
+  },
+  {
     title: 'Booking System for Salons & Clinics',
     description:
       'A guest booking platform where customers pick a treatment, see only genuinely free times, and confirm without creating an account — plus an admin area for running the schedule. Availability is derived on demand from staff hours minus time off minus existing bookings, never stored, so cancelling frees a slot with no cleanup job. Two customers clicking the same slot cannot both get it: a Postgres exclusion constraint refuses the second write, because checking in application code cannot close the gap between the check and the insert. 117 unit tests cover the availability engine including daylight-saving transitions, plus 92 integration checks run against a live database.',
